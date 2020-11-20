@@ -1,0 +1,7 @@
+---
+# tasks file for grumpy-penguin.ansibletower
+#- include_tasks: setup_tower.yml
+#- include_tasks: settings_system.yml
+#- include_tasks: settings_ui.yml
+#- include_tasks: settings_jobs.yml
+- include_tasks: setting_auth_ldap.yml

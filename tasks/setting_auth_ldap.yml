@@ -1,0 +1,25 @@
+- name: Configure LDAP authentication
+  tower_settings:
+    tower_host: "{{ ansibletower_tower_host }}"
+    tower_oauthtoken: "{{ ansibletower_tower_oauthtoken }}"
+    validate_certs: "{{ ansibletower_validate_certs }}"
+    settings:
+      AUTH_LDAP_SERVER_URI: "{{ ansibletower_auth_ldap_server_uri }}"
+      AUTH_LDAP_BIND_DN: "{{ ansibletower_auth_ldap_bind_dn }}"
+      AUTH_LDAP_BIND_PASSWORD: "{{ ansibletower_auth_ldap_bind_password }}"
+      AUTH_LDAP_START_TLS: "{{ ansibletower_auth_ldap_start_tls }}"
+      AUTH_LDAP_CONNECTION_OPTIONS:
+        OPT_REFERRALS: 0
+        OPT_NETWORK_TIMEOUT: 30
+      AUTH_LDAP_USER_SEARCH: "{{ ansibletower_auth_ldap_user_search }}"
+      AUTH_LDAP_USER_DN_TEMPLATE: "{{ ansibletower_auth_ldap_user_dn_template }}"
+      AUTH_LDAP_USER_ATTR_MAP: "{{ ansibletower_auth_ldap_user_attr_map }}"
+      AUTH_LDAP_GROUP_SEARCH: "{{ ansibletower_auth_ldap_group_search }}"
+      AUTH_LDAP_GROUP_TYPE: "{{ ansibletower_auth_ldap_group_type }}"
+      AUTH_LDAP_GROUP_TYPE_PARAMS: "{{ ansibletower_auth_ldap_group_type_params }}"
+      AUTH_LDAP_REQUIRE_GROUP: "{{ ansibletower_auth_ldap_require_group }}"
+      AUTH_LDAP_DENY_GROUP: "{{ ansibletower_auth_ldap_deny_group }}"
+      AUTH_LDAP_USER_FLAGS_BY_GROUP: "{{ ansibletower_auth_ldap_user_flags_by_group }}"
+      AUTH_LDAP_ORGANIZATION_MAP: "{{ ansibletower_auth_ldap_organization_map }}"
+      AUTH_LDAP_TEAM_MAP: "{{ ansibletower_auth_ldap_team_map }}"
+  no_log: false

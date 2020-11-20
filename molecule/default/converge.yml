@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include grumpy-penguin.ansibletower"
+      include_role:
+        name: "grumpy-penguin.ansibletower"
