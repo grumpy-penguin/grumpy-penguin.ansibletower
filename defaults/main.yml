@@ -4,51 +4,21 @@ ansibletower_tower_host: 'https://127.0.0.1'
 ansibletower_tower_oauthtoken: ''
 ansibletower_validate_certs: true
 ## LDAP Vars
-ansibletower_auth_ldap_server_uri: ldaps://ldap.example.com:636
-ansibletower_auth_ldap_bind_dn: CN=awx_service_account,OU=service accounts,DC=contoso,DC=com
-ansibletower_auth_ldap_bind_password: password
-ansibletower_auth_ldap_start_tls: false
+ansibletower_auth_ldap_server_uri: ''
+ansibletower_auth_ldap_bind_dn: ''
+ansibletower_auth_ldap_bind_password: ''
+ansibletower_auth_ldap_start_tls: ''
 ansibletower_auth_ldap_connection_options:
   opt_referrals: 0
   opt_network_timeout: 30
-ansibletower_auth_ldap_user_search:
-  - DC=contoso,DC=com
-  - SCOPE_SUBTREE
-  - (sAMAccountName=%(user)s)
+ansibletower_auth_ldap_user_search: []
 ansibletower_auth_ldap_user_dn_template: null
-ansibletower_auth_ldap_user_attr_map:
-  first_name: givenName
-  last_name: sn
-  email: userPrincipalName
-ansibletower_auth_ldap_group_search:
-  - OU=administrationgroups,DC=contoso,DC=com
-  - SCOPE_SUBTREE
-  - (objectClass=group)
-ansibletower_auth_ldap_group_type: ActiveDirectoryGroupType
-ansibletower_auth_ldap_group_type_params:
-  name_attr: cn
-ansibletower_auth_ldap_require_group: CN=awx_user_group,OU=administration groups,DC=contoso,DC=com
-ansibletower_auth_ldap_deny_group: CN=awx_user_group,OU=administration groups,DC=contoso,DC=com
-ansibletower_auth_ldap_user_flags_by_group:
-  is_superuser: CN=awx_user_group,OU=administration groups,DC=contoso,DC=com
-  is_system_auditor: CN=awx_user_group,OU=administration groups,DC=contoso,DC=com
-ansibletower_auth_ldap_organization_map:
-  contoso:
-    users: true
-    admins: OU=devops team,OU=administration groups,DC=contoso,DC=com
-    remove_admins: false
-    remove_users: false
-  contoso1:
-    users: true
-    admins: OU=devops team,OU=administration groups,DC=contoso,DC=com
-    remove_admins: false
-    remove_users: false
-ansibletower_auth_ldap_team_map:
-  team name 1:
-    organization: contoso
-    users: CN=team1,OU=groups,DC=contoso,DC=com
-    remove: true
-  team name 2:
-    organization: contoso1
-    users: CN=team1,OU=groups,DC=contoso,DC=com
-    remove: true
+ansibletower_auth_ldap_user_attr_map: {}
+ansibletower_auth_ldap_group_search: []
+ansibletower_auth_ldap_group_type: ''
+ansibletower_auth_ldap_group_type_params: {}
+ansibletower_auth_ldap_require_group: ''
+ansibletower_auth_ldap_deny_group: ''
+ansibletower_auth_ldap_user_flags_by_group: {}
+ansibletower_auth_ldap_organization_map: {}
+ansibletower_auth_ldap_team_map: {}
