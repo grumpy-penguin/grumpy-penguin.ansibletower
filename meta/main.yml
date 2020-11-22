@@ -52,4 +52,5 @@ dependencies: []
   # if you add dependencies to this list.
 
 collections:
+  - ansible.tower
   - awx.awx
