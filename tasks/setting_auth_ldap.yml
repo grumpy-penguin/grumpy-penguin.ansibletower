@@ -19,7 +19,9 @@
       AUTH_LDAP_GROUP_TYPE_PARAMS: "{{ ansibletower_auth_ldap_group_type_params }}"
       AUTH_LDAP_REQUIRE_GROUP: "{{ ansibletower_auth_ldap_require_group }}"
       AUTH_LDAP_DENY_GROUP: "{{ ansibletower_auth_ldap_deny_group }}"
-      AUTH_LDAP_USER_FLAGS_BY_GROUP: "{{ ansibletower_auth_ldap_user_flags_by_group }}"
+      AUTH_LDAP_USER_FLAGS_BY_GROUP:
+        is_superuser: "{{ ansibletower_auth_ldap_user_flags_by_group_superuser }}"
+        is_system_auditor: "{{ ansibletower_auth_ldap_user_flags_by_group_auditor }}"
       AUTH_LDAP_ORGANIZATION_MAP: "{{ ansibletower_auth_ldap_organization_map }}"
       AUTH_LDAP_TEAM_MAP: "{{ ansibletower_auth_ldap_team_map }}"
   no_log: true
