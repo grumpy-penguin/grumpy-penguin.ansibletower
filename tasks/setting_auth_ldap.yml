@@ -24,4 +24,4 @@
         is_system_auditor: "{{ ansibletower_auth_ldap_user_flags_by_group_auditor }}"
       AUTH_LDAP_ORGANIZATION_MAP: "{{ ansibletower_auth_ldap_organization_map }}"
       AUTH_LDAP_TEAM_MAP: "{{ ansibletower_auth_ldap_team_map }}"
-  no_log: true
+  no_log: false
